@@ -82,6 +82,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="11Api.cpp" />
     <ClCompile Include="AbilityState.cpp" />
     <ClCompile Include="DisableButtonBlp.cpp" />
     <ClCompile Include="DllMain.cpp" />

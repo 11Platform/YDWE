@@ -9,7 +9,7 @@ namespace base { namespace warcraft3 { namespace japi {
 	void InitializeDisplayChat();
 	void InitializeDisableButtonBlp();
 	void InitializeEffect();
-
+	void Initialize11API();
 	void initialize()
 	{
 		InitializeUnitState();
@@ -18,6 +18,9 @@ namespace base { namespace warcraft3 { namespace japi {
 		InitializeEventDamageData();
 		InitializeDisplayChat();
 		InitializeDisableButtonBlp();
-		InitializeEffect();
+		InitializeEffect();				
+#if (_MSC_VER > 1800)  // YDWE  π”√VS2017
+			Initialize11API();
+#endif
 	}
 }}}

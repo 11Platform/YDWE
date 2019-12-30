@@ -314,3 +314,164 @@ returns = real
 [[.args]]
 type = effect
 default = "bj_lastCreatedEffect"
+
+[EXNetConsume]
+title = "11平台 - 消费 [JAPI]"
+description = "${玩家}消费${多少}"
+comment = "玩家购买商品，成功返回ture，失败返回false"
+category = TC_NOTHING
+returns = boolean
+[[.args]]
+type = player
+[[.args]]
+type = integer
+
+[EXNetCommonConsume]
+title = "11平台 - 消费(一级货币) [JAPI]"
+description = "${玩家}消费(一级货币)${多少}"
+comment = "玩家购买商品消费(一级货币)，成功返回ture，失败返回false"
+category = TC_NOTHING
+returns = boolean
+[[.args]]
+type = player
+[[.args]]
+type = integer
+
+[EXNetUseItem]
+title = "11平台 - 道具扣除 [JAPI]"
+description = "${玩家}消耗${道具ID}${数量}"
+comment = "玩家请求消耗道具，成功返回ture，失败返回false"
+category = TC_NOTHING
+returns = boolean
+[[.args]]
+type = player
+[[.args]]
+type = itemcode
+[[.args]]
+type = integer
+min = 1
+
+[EXGetPlayerRealName]
+title = "11平台 - 获得玩家真实名字 [JAPI]"
+description = "EXGetPlayerRealName(${玩家})"
+comment = "获得玩家真实名字"
+category = TC_NOTHING
+returns = string
+[[.args]]
+type = player
+
+[YDWEGetRPGRankName]
+title = "11平台 - 显示当前的排名种类名称 [JAPI]"
+description = "YDWEGetRPGRankName()"
+comment = "显示当前的排名种类名称"
+category = TC_NOTHING
+returns = string
+
+[YDWEGetRPGTopName]
+title = "11平台 - 显示在排行榜中第rank位的玩家名 [JAPI]"
+description = "YDWEGetRPGTopName(${排名})"
+comment = "显示在排行榜中第rank位的玩家名，如果不存在则返回空字符串"
+category = TC_NOTHING
+returns = string
+[[.args]]
+type = integer
+min = 1
+
+[YDWEGetRPGTopScore]
+title = "11平台 - 显示在排行榜中第rank位的玩家分数 [JAPI]"
+description = "YDWEGetRPGTopScore(${排名})"
+comment = "显示在排行榜中第rank位的玩家分数，如果不存在则返回-1"
+category = TC_NOTHING
+returns = integer
+[[.args]]
+type = integer
+min = 1
+
+[YDWEGetPalyerRPGRank]
+title = "11平台 - 显示玩家的排行 [JAPI]"
+description = "YDWEGetPalyerRPGRank(${playerId})"
+comment = "显示玩家的排行，如果不存在则返回-1"
+category = TC_NOTHING
+returns = integer
+[[.args]]
+type = integer
+
+[YDWEGetPalyerRPGRankScore]
+title = "11平台 - 显示玩家的分数 [JAPI]"
+description = "YDWEGetPalyerRPGRankScore(${playerId})"
+comment = "显示玩家的分数，如果不存在则返回-1"
+category = TC_NOTHING
+returns = integer
+[[.args]]
+type = integer
+
+[YDWERPGBillingGetCurrency]
+title = "11平台 - 获取玩家货币余额 [JAPI]"
+description = "YDWERPGBillingGetCurrency(${玩家})"
+comment = "获取玩家货币余额"
+category = TC_NOTHING
+returns = integer
+[[.args]]
+type = player
+
+[YDWERPGBillingGetCommonCurrency]
+title = "11平台 - 获取玩家货币余额(一级货币) [JAPI]"
+description = "YDWERPGBillingGetCommonCurrency(${玩家})"
+comment = "获取玩家货币余额(一级货币)"
+category = TC_NOTHING
+returns = integer
+[[.args]]
+type = player
+
+[EXNetGetTime]
+title = "11平台 - 时间函数 [JAPI]"
+description = "EXNetGetTime()"
+comment = "时间函数"
+category = TC_NOTHING
+returns = string
+
+[YDWERPGGetMapConfig]
+title = "11平台 - 获取地图配置 [JAPI]"
+description = "YDWERPGGetMapConfig(${key})"
+comment = "获取地图配置"
+category = TC_NOTHING
+returns = string
+[[.args]]
+type = string
+
+[EXNetStatRemoteData]
+title = "11平台 - 统计引用 [JAPI]"
+description ="统计引用 EXNetStatRemoteData(${playerId},${key},${value})"
+comment = "统计引用，成功返回true，失败返回false"
+category = TC_NOTHING
+returns = boolean
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = string
+
+[YDWERPGGetRemoteData]
+title = "11平台 - 读取用户缓存数据 [JAPI]"
+description ="读取用户缓存数据 YDWERPGGetRemoteData(${玩家},${key})"
+comment = "读取用户缓存数据"
+category = TC_NOTHING
+returns = string
+[[.args]]
+type = player
+[[.args]]
+type = string
+
+[YDWESaveRemoteData]
+title = "11平台 - 保存用户缓存数据 [JAPI]"
+description ="保存用户缓存数据 YDWESaveRemoteData(${playerId},${key},${value})"
+comment = "保存用户缓存数据，成功返回true，失败返回false"
+category = TC_NOTHING
+returns = boolean
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = string
